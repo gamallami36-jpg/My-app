@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Creator AI Tool</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      margin: 0;
+      padding: 15px;
+    }
+    h1 {
+      text-align: center;
+      color: #38bdf8;
+    }
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    .tabs button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      background: #1e293b;
+      color: white;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    .tabs button.active {
+      background: #38bdf8;
+      color: black;
+    }
+    .box {
+      background: #1e293b;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    textarea, input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+    button.generate {
+      margin-top: 10px;
+      width: 100%;
+      padding: 12px;
+      background: #22c55e;
+      border: none;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 15px;
+      background: #020617;
+      padding: 10px;
+      border-radius: 8px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Creator AI</h1>
+
+<div class="tabs">
+  <button class="active" onclick="showTab(1)">Thumbnail</button>
+  <button onclick="showTab(2)">Script</button>
+  <button onclick="showTab(3)">Chat</button>
+</div>
+
+<div id="tab1" class="box">
+  <input id="thumbInput" placeholder="Video topic..." />
+  <button class="generate" onclick="genThumbnail()">Generate</button>
+  <div id="thumbResult" class="result"></div>
+</div>
+
+<div id="tab2" class="box" style="display:none">
+  <textarea id="scriptInput" rows="4" placeholder="Video idea..."></textarea>
+  <button class="generate" onclick="genScript()">Generate Script</button>
+  <div id="scriptResult" class="result"></div>
+</div>
+
+<div id="tab3" class="box" style="display:none">
+  <input id="chatInput" placeholder="Ask something..." />
+  <button class="generate" onclick="genChat()">Send</button>
+  <div id="chatResult" class="result"></div>
+</div>
+
+<script>
+function showTab(n) {
+  document.querySelectorAll('.box').forEach(b => b.style.display = 'none');
+  document.querySelectorAll('.tabs button').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab'+n).style.display = 'block';
+  document.querySelectorAll('.tabs button')[n-1].classList.add('active');
+}
+
+function genThumbnail() {
+  const topic = thumbInput.value;
+  thumbResult.innerText =
+`Thumbnail Idea:
+Big face reaction 😲
+Text: "YOU WON'T BELIEVE THIS!"
+Colors: Yellow + Red
+Topic: ${topic}`;
+}
+
+function genScript() {
+  const idea = scriptInput.value;
+  scriptResult.innerText =
+`Hook: Wait till the end...
+Main: This video explains ${idea} in a simple way.
+CTA: Follow for more!`;
+}
+
+function genChat() {
+  const q = chatInput.value.toLowerCase();
+  let reply = "Interesting question 🤔";
+
+  if (q.includes("youtube")) reply = "Consistency is the key on YouTube!";
+  if (q.includes("money")) reply = "Focus on value first, money comes later.";
+  if (q.includes("views")) reply = "Better hook = more views.";
+
+  chatResult.innerText = reply;
+}
+</script>
+
+</body>
+  </html>
