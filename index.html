@@ -1,157 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Creator AI Tool</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
-      margin: 0;
-      padding: 15px;
-    }
-    h1 {
-      text-align: center;
-      color: #38bdf8;
-    }
-    .tabs {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 15px;
-    }
-    .tabs button {
-      flex: 1;
-      padding: 10px;
-      border: none;
-      background: #1e293b;
-      color: white;
-      cursor: pointer;
-      border-radius: 8px;
-    }
-    .tabs button.active {
-      background: #38bdf8;
-      color: black;
-    }
-    .box {
-      background: #1e293b;
-      padding: 15px;
-      border-radius: 10px;
-      margin-top: 10px;
-    }
-    textarea, input {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      border-radius: 8px;
-      border: none;
-      outline: none;
-    }
-    button.generate {
-      margin-top: 10px;
-      width: 100%;
-      padding: 12px;
-      background: #22c55e;
-      border: none;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    .result {
-      margin-top: 15px;
-      background: #020617;
-      padding: 10px;
-      border-radius: 8px;
-      white-space: pre-wrap;
-    <!DOCTYPE html>
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>Thumbnail AI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <title>Thumbnail AI - Home</title>
   <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #020617);
-      color: #fff;
-    }
-
-    header {
-      text-align: center;
-      padding: 20px;
-      font-size: 24px;
-      font-weight: bold;
-      color: #38bdf8;
-    }
-
-    .container {
-      padding: 15px;
-      max-width: 500px;
-      margin: auto;
-    }
-
-    .card {
-      background: #020617;
-      border-radius: 16px;
-      padding: 16px;
-      margin-bottom: 15px;
-      box-shadow: 0 0 20px rgba(56,189,248,0.15);
-    }
-
-    label {
-      font-size: 14px;
-      opacity: 0.8;
-    }
-
-    input, textarea, select {
-      width: 100%;
-      padding: 12px;
-      margin-top: 8px;
-      border-radius: 12px;
-      border: none;
-      outline: none;
-      background: #0f172a;
-      color: white;
-    }
-
-    button {
-      width: 100%;
-      padding: 14px;
-      margin-top: 15px;
-      border-radius: 14px;
-      border: none;
-      font-size: 16px;
-      font-weight: bold;
-      background: linear-gradient(135deg, #38bdf8, #22c55e);
-      color: #000;
-      cursor: pointer;
-    }
-
-    .result {
-      margin-top: 15px;
-      background: #0f172a;
-      padding: 12px;
-      border-radius: 12px;
-      font-size: 14px;
-      white-space: pre-wrap;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 12px;
-      opacity: 0.6;
-      margin: 20px 0;
-    }
+    body { margin:0; font-family: "Segoe UI", Tahoma, sans-serif; background:#fff; color:#000; }
+    header { text-align:center; padding:20px; font-size:24px; font-weight:bold; border-bottom:1px solid #ccc; }
+    nav { display:flex; justify-content:center; margin:15px 0; }
+    nav a { text-decoration:none; margin:0 10px; font-weight:bold; color:#38bdf8; }
+    .container { max-width:500px; margin:auto; padding:15px; }
+    .card { background:#f5f5f5; border-radius:16px; padding:16px; margin-bottom:15px; box-shadow:0 0 10px rgba(0,0,0,0.05); }
+    button { width:100%; padding:14px; margin-top:15px; border-radius:14px; border:none; font-size:16px; font-weight:bold; background:linear-gradient(135deg,#38bdf8,#22c55e); color:#fff; cursor:pointer; }
   </style>
 </head>
-
 <body>
 
 <header>🎨 Thumbnail AI</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="thumbnails.html">صنع الصورة المصغرة</a>
+</nav>
+
+<div class="container">
+  <div class="card">
+    <h2>مرحبًا بك في تطبيق Thumbnail AI!</h2>
+    <p>هنا يمكنك إدارة وإنشاء الصور المصغرة لمحتواك بسهولة.</p>
+    <p>انتقل لصفحة إنشاء الصور المصغرة لتجربة الأداة.</p>
+  </div>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thumbnail AI - صور مصغرة</title>
+  <style>
+    body { margin:0; font-family: "Segoe UI", Tahoma, sans-serif; background:#fff; color:#000; }
+    header { text-align:center; padding:20px; font-size:24px; font-weight:bold; border-bottom:1px solid #ccc; color:#38bdf8; }
+    nav { display:flex; justify-content:center; margin:15px 0; }
+    nav a { text-decoration:none; margin:0 10px; font-weight:bold; color:#38bdf8; }
+    .container { max-width:500px; margin:auto; padding:15px; }
+    .card { background:#f5f5f5; border-radius:16px; padding:16px; margin-bottom:15px; box-shadow:0 0 10px rgba(0,0,0,0.05); }
+    input, textarea { width:100%; padding:12px; margin-top:8px; border-radius:12px; border:1px solid #ccc; outline:none; }
+    button { width:100%; padding:14px; margin-top:15px; border-radius:14px; border:none; font-size:16px; font-weight:bold; cursor:pointer; }
+    .btn-generate { background:linear-gradient(135deg,#38bdf8,#22c55e); color:#fff; }
+    .btn-subscribe { background:linear-gradient(135deg,#facc15,#f43f5e); color:#000; }
+    .result { margin-top:15px; padding:12px; border-radius:12px; background:#e0e0e0; }
+  </style>
+</head>
+<body>
+
+<header>🎨 Thumbnail AI</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="thumbnails.html">صنع الصورة المصغرة</a>
+</nav>
 
 <div class="container">
 
@@ -161,7 +70,7 @@
   </div>
 
   <div class="card">
-    <label>النص المكتوب على الصورة</label>
+    <label>النص على الصورة</label>
     <input id="text" placeholder="مثال: لا تفوت هذا!">
   </div>
 
@@ -170,23 +79,40 @@
     <input type="file" accept="image/*">
   </div>
 
-  <button onclick="generate()">إنشاء معاينة الصورة</button>
+  <button class="btn-generate" onclick="generate()">إنشاء معاينة الصورة</button>
 
   <div id="output" class="result"></div>
 
-</div>
+  <div class="card">
+    <label>الاشتراك المدفوع (فتح توليد الصور بالذكاء الاصطناعي)</label>
+    <button class="btn-subscribe" onclick="subscribe()">اشترك $3.15 شهريًا</button>
+  </div>
 
-<footer>
-  قريبًا: توليد صور حقيقية بالذكاء الاصطناعي 🚀
-</footer>
+</div>
 
 <script>
   function generate() {
     const topic = document.getElementById("topic").value;
     const text = document.getElementById("text").value;
-
     document.getElementById("output").innerText =
 `✅ تم إنشاء معاينة الصورة المصغرة
 
-📌 الموضوع:
-${
+📌 الموضوع: ${topic || "—"}
+📝 النص على الصورة: "${text || "—"}"
+
+🎨 التصميم المقترح:
+- خلفية بيضاء
+- ألوان زاهية
+- وجه كبير مع تعبير واضح
+
+⚠️ هذه معاينة فقط
+قريبًا سيتم توليد الصورة بالذكاء الاصطناعي`;
+  }
+
+  function subscribe() {
+    alert("شكراً لاشتراكك بقيمة 3.15$! \\nقريبًا ستتمكن من توليد الصور بالذكاء الاصطناعي مباشرة داخل التطبيق 🚀");
+  }
+</script>
+
+</body>
+      </html>
